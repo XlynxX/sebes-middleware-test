@@ -17,8 +17,8 @@ This application acts as an intermediary in the payment flow:
 ┌─────────┐      ┌────────────┐      ┌──────────┐
 │ Gateway │─────▶│ Middleware │─────▶│ Provider │
 └─────────┘      └────────────┘      └──────────┘
-                       │
-                       ▼
+                       ▲   │
+                       │   ▼
                    ┌──────┐
                    │ User │
                    └──────┘
