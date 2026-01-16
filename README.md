@@ -45,7 +45,7 @@ cd sebes-middleware-test
 bundle install
 ```
 
-### 4. Run tests
+### 3. Run tests
 
 ```bash
 bundle exec rspec
