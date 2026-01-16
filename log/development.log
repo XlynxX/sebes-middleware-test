@@ -12,3 +12,4 @@ Started GET "/icon.png" for ::1 at 2026-01-15 18:42:44 +0200
   
 ActionController::RoutingError (No route matches [GET] "/icon.png"):
   
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='SebesMiddlewareTest'*/[0m
