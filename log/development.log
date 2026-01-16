@@ -13,3 +13,130 @@ Started GET "/icon.png" for ::1 at 2026-01-15 18:42:44 +0200
 ActionController::RoutingError (No route matches [GET] "/icon.png"):
   
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='SebesMiddlewareTest'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='SebesMiddlewareTest'*/[0m
+Started GET "/transactions/auth/123" for ::1 at 2026-01-16 13:42:50 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='SebesMiddlewareTest'*/[0m
+Processing by TransactionsController#auth as */*
+  Parameters: {"id" => "123"}
+Completed 500 Internal Server Error in 82ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+Faraday::ConnectionFailed (Failed to open TCP connection to provider.example.com:443 (getaddrinfo: Этот хост неизвестен. ))
+Caused by: Socket::ResolutionError (Failed to open TCP connection to provider.example.com:443 (getaddrinfo: Этот хост неизвестен. ))
+Caused by: Socket::ResolutionError (getaddrinfo: Этот хост неизвестен. )
+
+Information for: Faraday::ConnectionFailed (Failed to open TCP connection to provider.example.com:443 (getaddrinfo: Этот хост неизвестен. )):
+  
+
+Information for cause: Socket::ResolutionError (Failed to open TCP connection to provider.example.com:443 (getaddrinfo: Этот хост неизвестен. )):
+  
+app/services/provider_client.rb:10:in 'ProviderClient#authorize_transaction'
+app/controllers/transactions_controller.rb:3:in 'TransactionsController#auth'
+
+Information for cause: Socket::ResolutionError (getaddrinfo: Этот хост неизвестен. ):
+  
+app/services/provider_client.rb:10:in 'ProviderClient#authorize_transaction'
+app/controllers/transactions_controller.rb:3:in 'TransactionsController#auth'
+Started GET "/transactions/auth/123" for ::1 at 2026-01-16 13:42:56 +0200
+Processing by TransactionsController#auth as */*
+  Parameters: {"id" => "123"}
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+Faraday::ConnectionFailed (Failed to open TCP connection to provider.example.com:443 (getaddrinfo: Этот хост неизвестен. ))
+Caused by: Socket::ResolutionError (Failed to open TCP connection to provider.example.com:443 (getaddrinfo: Этот хост неизвестен. ))
+Caused by: Socket::ResolutionError (getaddrinfo: Этот хост неизвестен. )
+
+Information for: Faraday::ConnectionFailed (Failed to open TCP connection to provider.example.com:443 (getaddrinfo: Этот хост неизвестен. )):
+  
+
+Information for cause: Socket::ResolutionError (Failed to open TCP connection to provider.example.com:443 (getaddrinfo: Этот хост неизвестен. )):
+  
+app/services/provider_client.rb:10:in 'ProviderClient#authorize_transaction'
+app/controllers/transactions_controller.rb:3:in 'TransactionsController#auth'
+
+Information for cause: Socket::ResolutionError (getaddrinfo: Этот хост неизвестен. ):
+  
+app/services/provider_client.rb:10:in 'ProviderClient#authorize_transaction'
+app/controllers/transactions_controller.rb:3:in 'TransactionsController#auth'
+Started GET "/transactions/auth/123" for ::1 at 2026-01-16 13:44:44 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='SebesMiddlewareTest'*/[0m
+  
+ArgumentError (Missing :action key on routes definition, please check your routes.):
+  
+config/routes.rb:22:in 'block (2 levels) in <main>'
+config/routes.rb:14:in 'block in <main>'
+config/routes.rb:1:in '<main>'
+Started GET "/transactions/auth/123" for ::1 at 2026-01-16 13:44:52 +0200
+Processing by TransactionsController#auth as */*
+  Parameters: {"id" => "123"}
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+Faraday::ConnectionFailed (Failed to open TCP connection to provider.example.com:443 (getaddrinfo: Этот хост неизвестен. ))
+Caused by: Socket::ResolutionError (Failed to open TCP connection to provider.example.com:443 (getaddrinfo: Этот хост неизвестен. ))
+Caused by: Socket::ResolutionError (getaddrinfo: Этот хост неизвестен. )
+
+Information for: Faraday::ConnectionFailed (Failed to open TCP connection to provider.example.com:443 (getaddrinfo: Этот хост неизвестен. )):
+  
+
+Information for cause: Socket::ResolutionError (Failed to open TCP connection to provider.example.com:443 (getaddrinfo: Этот хост неизвестен. )):
+  
+app/services/provider_client.rb:10:in 'ProviderClient#authorize_transaction'
+app/controllers/transactions_controller.rb:3:in 'TransactionsController#auth'
+
+Information for cause: Socket::ResolutionError (getaddrinfo: Этот хост неизвестен. ):
+  
+app/services/provider_client.rb:10:in 'ProviderClient#authorize_transaction'
+app/controllers/transactions_controller.rb:3:in 'TransactionsController#auth'
+Started POST "/gateway/transactions" for ::1 at 2026-01-16 13:45:04 +0200
+Processing by Gateway::TransactionsController#create as */*
+  Parameters: {"amount" => 1000, "currency" => "EUR", "id" => "123", "transaction" => {"amount" => 1000, "currency" => "EUR", "id" => "123"}}
+[31mUnpermitted parameter: :transaction. Context: { controller: Gateway::TransactionsController, action: create, request: #<ActionDispatch::Request:0x0000010ba974b9a8>, params: {"amount" => 1000, "currency" => "EUR", "id" => "123", "controller" => "gateway/transactions", "action" => "create", "transaction" => {"amount" => 1000, "currency" => "EUR", "id" => "123"}} }[0m
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+Faraday::ConnectionFailed (Failed to open TCP connection to provider.example.com:443 (getaddrinfo: Этот хост неизвестен. ))
+Caused by: Socket::ResolutionError (Failed to open TCP connection to provider.example.com:443 (getaddrinfo: Этот хост неизвестен. ))
+Caused by: Socket::ResolutionError (getaddrinfo: Этот хост неизвестен. )
+
+Information for: Faraday::ConnectionFailed (Failed to open TCP connection to provider.example.com:443 (getaddrinfo: Этот хост неизвестен. )):
+  
+
+Information for cause: Socket::ResolutionError (Failed to open TCP connection to provider.example.com:443 (getaddrinfo: Этот хост неизвестен. )):
+  
+app/services/provider_client.rb:5:in 'ProviderClient#init_transaction'
+app/controllers/gateway/transactions_controller.rb:4:in 'Gateway::TransactionsController#create'
+
+Information for cause: Socket::ResolutionError (getaddrinfo: Этот хост неизвестен. ):
+  
+app/services/provider_client.rb:5:in 'ProviderClient#init_transaction'
+app/controllers/gateway/transactions_controller.rb:4:in 'Gateway::TransactionsController#create'
+Started GET "/transactions/auth/provider_456" for ::1 at 2026-01-16 13:52:05 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='SebesMiddlewareTest'*/[0m
+Processing by TransactionsController#auth as */*
+  Parameters: {"id" => "provider_456"}
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+Faraday::ConnectionFailed (Failed to open TCP connection to provider.example.com:443 (getaddrinfo: Этот хост неизвестен. ))
+Caused by: Socket::ResolutionError (Failed to open TCP connection to provider.example.com:443 (getaddrinfo: Этот хост неизвестен. ))
+Caused by: Socket::ResolutionError (getaddrinfo: Этот хост неизвестен. )
+
+Information for: Faraday::ConnectionFailed (Failed to open TCP connection to provider.example.com:443 (getaddrinfo: Этот хост неизвестен. )):
+  
+
+Information for cause: Socket::ResolutionError (Failed to open TCP connection to provider.example.com:443 (getaddrinfo: Этот хост неизвестен. )):
+  
+app/services/provider_client.rb:10:in 'ProviderClient#authorize_transaction'
+app/controllers/transactions_controller.rb:3:in 'TransactionsController#auth'
+
+Information for cause: Socket::ResolutionError (getaddrinfo: Этот хост неизвестен. ):
+  
+app/services/provider_client.rb:10:in 'ProviderClient#authorize_transaction'
+app/controllers/transactions_controller.rb:3:in 'TransactionsController#auth'
